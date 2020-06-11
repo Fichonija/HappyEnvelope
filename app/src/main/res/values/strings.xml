@@ -12,4 +12,13 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_calculation">Calculate</string>
+    <string name="calculation_intro">Enter required values to find out how expensive a wedding gift should be!</string>
+    <string name="calculation_header_personal">Personal Information</string>
+    <string name="calculation_label_salary">How much is your salary?</string>
+    <string name="calculation_header_bridalparty">Bridal Party Information</string>
+    <string name="calculation_label_relationship">What is your relationship with the Bride or Groom?</string>
+    <string name="calculation_label_attending">Will you be attending the wedding?</string>
+    <string name="calculation_label_festivities">Did you attend any of the pre-wedding festivities?</string>
+    <string name="calculation_header_event">Event Information</string>
+    <string name="calculation_label_locale">What is the locale the wedding will be organized in?</string>
 </resources>

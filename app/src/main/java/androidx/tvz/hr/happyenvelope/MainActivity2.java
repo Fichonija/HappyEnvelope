@@ -1,16 +1,14 @@
-package android.tvz.hr.happyenvelope;
+package androidx.tvz.hr.happyenvelope;
 
 import android.os.Bundle;
-import android.tvz.hr.happyenvelope.ui.calculation.view.CalculationFragment;
+import android.tvz.hr.happyenvelope.R;
+
 import android.view.View;
 import android.view.Menu;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;

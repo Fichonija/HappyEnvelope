@@ -1,4 +1,4 @@
-package android.tvz.hr.happyenvelope.retrofit.models;
+package androidx.tvz.hr.happyenvelope.retrofit.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

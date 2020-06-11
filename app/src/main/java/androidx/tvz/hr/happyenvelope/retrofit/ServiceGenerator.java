@@ -1,8 +1,9 @@
-package android.tvz.hr.happyenvelope.retrofit;
+package androidx.tvz.hr.happyenvelope.retrofit;
 
 import java.io.IOException;
 
-import android.tvz.hr.happyenvelope.retrofit.models.AccessToken;
+import androidx.tvz.hr.happyenvelope.retrofit.models.AccessToken;
+
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

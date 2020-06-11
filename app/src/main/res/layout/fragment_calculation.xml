@@ -5,21 +5,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.calculation.view.CalculationFragment">
+    tools:context="androidx.tvz.hr.happyenvelope.ui.calculation.view.CalculationFragment">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tw_calc"
+        android:id="@+id/tw_calculation_intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="This is Calculation Fragment" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/calculation_intro" />
+
+    <LinearLayout
+        android:id="@+id/ly_calculation_form"
+        android:layout_width="409dp"
+        android:layout_height="636dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_calculation_intro"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- PERSONAL INFORMATION -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tw_calculation_header_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/calculation_header_personal" />
+
+        <!-- Salary -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/calculation_label_salary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Attending -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_attending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/calculation_label_attending">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- BRIDAL PARTY INFORMATION -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tw_calculation_header_bridalparty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/calculation_header_bridalparty" />
+
+        <!-- Relationship -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_relationship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/calculation_label_relationship">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Festivities -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_festivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/calculation_label_festivities">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- EVENT INFORMATION -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tw_calculation_header_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/calculation_header_event" />
+
+        <!-- Locale -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_locale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/calculation_label_locale">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
-package android.tvz.hr.happyenvelope.retrofit.services;
+package androidx.tvz.hr.happyenvelope.retrofit.services;
 
-import android.tvz.hr.happyenvelope.retrofit.models.AccessToken;
+import androidx.tvz.hr.happyenvelope.retrofit.models.AccessToken;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
