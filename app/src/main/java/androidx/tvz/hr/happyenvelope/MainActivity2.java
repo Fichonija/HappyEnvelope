@@ -41,7 +41,8 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-        // TEST JEL RADI COMMIT !!!!
+        // novi test
+        // TEST
 
 
         // Postaviti da se otvara CalculationActivity
