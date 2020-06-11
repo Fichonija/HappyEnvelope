@@ -12,15 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="androidx.tvz.hr.happyenvelope.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_weddings"
+        android:name="androidx.tvz.hr.happyenvelope.ui.weddings.view.WeddingsFragment"
+        android:label="@string/menu_weddings"
+        tools:layout="@layout/fragment_weddings" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="androidx.tvz.hr.happyenvelope.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_gifts"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment

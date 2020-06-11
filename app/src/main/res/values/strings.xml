@@ -9,8 +9,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_weddings">Weddings</string>
+    <string name="menu_gifts">Gifts</string>
     <string name="menu_calculation">Calculate</string>
     <string name="calculation_intro">Enter required values to find out how expensive a wedding gift should be!</string>
     <string name="calculation_header_personal">Personal Information</string>
@@ -21,7 +21,12 @@
     <string name="calculation_label_festivities">Did you attend any of the pre-wedding festivities?</string>
     <string name="calculation_header_event">Event Information</string>
     <string name="calculation_label_locale">What is the locale the wedding will be organized in?</string>
-    <string name="calculation_label_event">Where will the event be held?</string>
-    <string name="calculation_label_season">In what season will the event be held?</string>
-    <string name="calculation_save">Calculate</string>
+    <string name="weddings_intro">List of Weddings</string>
+    <string name="weddings_form">Enter new Wedding</string>
+    <string name="tw_title_form">Title</string>
+    <string name="tw_description_form">Description</string>
+    <string name="calculation_label_event">Calculation label event</string>
+    <string name="calculation_label_season">calculation_label_season</string>
+    <string name="calculation_save">Save</string>
+    tw_title_form
 </resources>
