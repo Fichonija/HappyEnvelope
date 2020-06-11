@@ -21,4 +21,7 @@
     <string name="calculation_label_festivities">Did you attend any of the pre-wedding festivities?</string>
     <string name="calculation_header_event">Event Information</string>
     <string name="calculation_label_locale">What is the locale the wedding will be organized in?</string>
+    <string name="calculation_label_event">Where will the event be held?</string>
+    <string name="calculation_label_season">In what season will the event be held?</string>
+    <string name="calculation_save">Calculate</string>
 </resources>

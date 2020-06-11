@@ -11,11 +11,11 @@
         android:id="@+id/tw_calculation_intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             tools:text="@string/calculation_header_personal" />
 
         <!-- Salary -->
@@ -52,12 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:hint="@string/calculation_label_salary">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_salary_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
         <!-- Attending -->
@@ -66,11 +69,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:hint="@string/calculation_label_attending">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_attending_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="none"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -81,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             tools:text="@string/calculation_header_bridalparty" />
 
         <!-- Relationship -->
@@ -89,11 +96,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:hint="@string/calculation_label_relationship">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_relationship_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="none"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,11 +113,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:hint="@string/calculation_label_festivities">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_festivities_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="none"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -118,6 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             tools:text="@string/calculation_header_event" />
 
         <!-- Locale -->
@@ -126,18 +140,59 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:hint="@string/calculation_label_locale">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_locale_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Event -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:hint="@string/calculation_label_event">
+
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_event_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Season -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_calculation_label_season"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:hint="@string/calculation_label_season">
+
+            <AutoCompleteTextView
+                android:id="@+id/tw_calculation_season_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
+        <Button
+            android:id="@+id/outlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculation_save"
+            style="?attr/materialButtonOutlinedStyle"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

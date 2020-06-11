@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="salary">
+        <item>Unemployed</item>
+        <item>Minimal Wage</item>
+        <item>Average Wage</item>
+        <item>Above Average Wage</item>
+        <item>Wealthy</item>
+    </string-array>
+
+    <string-array name="attending">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="relationship">
+        <item>Immediate Family/Siblings</item>
+        <item>Relatives</item>
+        <item>Best Man</item>
+        <item>Close Friend</item>
+        <item>Casual Friend</item>
+        <item>Friend of the Family</item>
+    </string-array>
+
+    <string-array name="festivities">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="locale">
+        <item>Central Croatia</item>
+        <item>Slavonija</item>
+        <item>Dalmacija</item>
+        <item>Istra</item>
+        <item>Hercegovina</item>
+    </string-array>
+
+    <string-array name="event">
+        <item>Club Party</item>
+        <item>Garden Party</item>
+        <item>Casual Restaurant</item>
+        <item>Fancy Restaurant</item>
+    </string-array>
+
+    <string-array name="season">
+        <item>Peak (Spring/Summer)</item>
+        <item>Off-Peak (Spring/Summer)</item>
+    </string-array>
+</resources>
