@@ -1,4 +1,4 @@
-package android.tvz.hr.happyenvelope.ui.gallery;
+package androidx.tvz.hr.happyenvelope.ui.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
