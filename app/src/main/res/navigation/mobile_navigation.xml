@@ -22,4 +22,10 @@
         android:name="android.tvz.hr.happyenvelope.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_gifts"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_calculation"
+        android:name="android.tvz.hr.happyenvelope.ui.calculation.view.CalculationFragment"
+        android:label="Calculate"
+        tools:layout="@layout/fragment_calculation" />
 </navigation>
