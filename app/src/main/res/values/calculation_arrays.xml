@@ -14,7 +14,7 @@
     </string-array>
 
     <string-array name="relationship">
-        <item>Immediate Family/Siblings</item>
+        <item>Immediate Family</item>
         <item>Relatives</item>
         <item>Best Man</item>
         <item>Close Friend</item>
@@ -44,6 +44,6 @@
 
     <string-array name="season">
         <item>Peak (Spring/Summer)</item>
-        <item>Off-Peak (Spring/Summer)</item>
+        <item>Off-Peak (Autumn/Winter)</item>
     </string-array>
 </resources>
