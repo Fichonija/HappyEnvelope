@@ -3,6 +3,8 @@ package androidx.tvz.hr.happyenvelope.mock.main;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Gift implements Parcelable {
     public int id;
     public String name;
@@ -92,4 +94,9 @@ public class Gift implements Parcelable {
             return new Gift[size];
         }
     };
+    @NonNull
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

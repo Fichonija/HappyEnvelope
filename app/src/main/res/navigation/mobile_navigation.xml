@@ -11,6 +11,7 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
+
     <fragment
         android:id="@+id/nav_weddings"
         android:name="androidx.tvz.hr.happyenvelope.ui.weddings.view.WeddingsFragment"
@@ -19,9 +20,9 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="androidx.tvz.hr.happyenvelope.ui.slideshow.SlideshowFragment"
+        android:name="androidx.tvz.hr.happyenvelope.ui.gifts.view.GiftsFragment"
         android:label="@string/menu_gifts"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_gifts" />
 
     <fragment
         android:id="@+id/nav_calculation"
