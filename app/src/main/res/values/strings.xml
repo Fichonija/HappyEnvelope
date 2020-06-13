@@ -25,8 +25,8 @@
     <string name="weddings_form">Enter new Wedding</string>
     <string name="tw_title_form">Title</string>
     <string name="tw_description_form">Description</string>
-    <string name="calculation_label_event">Calculation label event</string>
-    <string name="calculation_label_season">calculation_label_season</string>
+    <string name="calculation_label_event">What type of event will the wedding party be?</string>
+    <string name="calculation_label_season">In what season will the event be held?</string>
     <string name="calculation_save">Save</string>
     <string name="gift">gift</string>
     <string name="title_activity_gift_detail">GiftDetail</string>

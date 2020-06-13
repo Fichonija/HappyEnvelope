@@ -3,6 +3,8 @@ package androidx.tvz.hr.happyenvelope.mock.main;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Wedding implements Parcelable {
     public int id;
     public String title;
@@ -91,4 +93,10 @@ public class Wedding implements Parcelable {
             return new Wedding[size];
         }
     };
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.title;
+    }
 }
