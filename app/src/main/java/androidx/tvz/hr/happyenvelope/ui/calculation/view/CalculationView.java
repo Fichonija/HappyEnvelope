@@ -12,4 +12,5 @@ public interface CalculationView {
     void initializeLocaleDropdown(View root);
     void initializeEventDropdown(View root);
     void initializeSeasonDropdown(View root);
+    void initializeSaveButton();
 }

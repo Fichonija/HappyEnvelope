@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +21,7 @@ import androidx.tvz.hr.happyenvelope.mock.codebook.Locale;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Relationship;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Salary;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Season;
+import androidx.tvz.hr.happyenvelope.mock.main.Calculation;
 import androidx.tvz.hr.happyenvelope.mock.main.Wedding;
 import androidx.tvz.hr.happyenvelope.services.codebook.CodebookService;
 import androidx.tvz.hr.happyenvelope.services.codebook.MockCodebookService;
@@ -60,6 +60,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
     private Season selectedSeason;
     private int selectedAttending;
     private int selectedFestivities;
+
+    private Wedding selectedWedding;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -214,18 +216,18 @@ public class CalculationFragment extends Fragment implements CalculationView {
             }
         });
     }
-
-    private void initializeSaveButton() {
+    @Override
+    public void initializeSaveButton() {
         bt_calculation_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double calculation = calculationPresenter.calculate(selectedSalary, selectedAttending, selectedRelationship, selectedFestivities, selectedLocale, selectedEvent, selectedSeason);
+                Calculation calculation = calculationPresenter.calculate(selectedSalary, selectedAttending, selectedRelationship, selectedFestivities, selectedLocale, selectedEvent, selectedSeason);
 
                 ArrayAdapter<Wedding> adapter =
                         new ArrayAdapter<Wedding>(getActivity(), R.layout.calculation_dropdownitem, weddingService.getWeddings());
                 MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(getActivity());
                 dialogBuilder
-                        .setTitle("Choose a Wedding and click Save to add calculation.")
+                        .setTitle("Select Wedding and click Save to add calculation. Calculation sum: " + calculation.calculationSum)
                         .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -235,12 +237,19 @@ public class CalculationFragment extends Fragment implements CalculationView {
                         .setPositiveButton("Save", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getActivity(), "Postive button", Toast.LENGTH_SHORT).show();
+                                if (selectedWedding == null){
+                                    Toast.makeText(getActivity(), "No Wedding selected!", Toast.LENGTH_SHORT).show();
+                                }
+                                else{
+                                    calculationPresenter.saveCalculationToWedding(calculation, selectedWedding);
+                                    Toast.makeText(getActivity(), "Calculation sum of " + calculation.calculationSum + " added to Wedding " + selectedWedding + ".", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         })
                         .setSingleChoiceItems(adapter, -1, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                selectedWedding = adapter.getItem(which);
                                 Toast.makeText(getActivity(), "Click Save to add calculation to " + adapter.getItem(which).getTitle() + " wedding!", Toast.LENGTH_SHORT).show();
                             }
                         })
