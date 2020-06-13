@@ -37,9 +37,9 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tw_weddings_form"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="248dp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,30 +52,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/ew_weddings_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tw_weddings_form"
         tools:text="@string/tw_title_form" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_calculation_label_relationship"
+
+    <EditText
+        android:id="@+id/ew_weddings_title"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="306dp"
-        android:gravity="center"
-        android:hint="Test"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter wedding title"
+        app:layout_constraintBottom_toTopOf="@+id/tw_description_form"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tw_title_form">
+        app:layout_constraintTop_toBottomOf="@+id/tw_weddings_form" />
 
-        <AutoCompleteTextView
-            android:id="@+id/tw_calculation_relationship_dropdown"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:inputType="none"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tw_description_form"
@@ -85,66 +81,98 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tf_calculation_label_relationship"
+        app:layout_constraintTop_toBottomOf="@+id/ew_weddings_title"
         tools:text="@string/tw_description_form" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_descritpion"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:hint="Test"
-        app:layout_constraintTop_toBottomOf="@+id/tw_description_form">
 
-        <AutoCompleteTextView
-            android:id="@+id/tw_calculation_relationship"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:inputType="none" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/ew_weddings_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter wedding description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_description_form" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tw_gift_form"
         style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tf_descritpion"
+        app:layout_constraintTop_toBottomOf="@+id/ew_weddings_description"
         tools:text="@string/gift_form" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_"
+        android:id="@+id/tf_wedding_label_gift"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="141dp"
         android:gravity="center"
-        android:hint="@string/calculation_label_locale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tw_gift_form">
 
-    <AutoCompleteTextView
-        android:id="@+id/tw_calculation_locale_dropdown"
+        <AutoCompleteTextView
+            android:id="@+id/tw_wedding_gift_dropdown"
+            android:layout_width="match_parent"
+            android:hint="@string/wedding_label_gift"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tw_calculation_form"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="none"
-        app:layout_constraintTop_toTopOf="@+id/tf_calculation_label_locale" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf_wedding_label_gift"
+        tools:text="@string/calculation_form" />
+
+    <EditText
+        android:id="@+id/ew_weddings_calculation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Go to calculation screen to add new calculation"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_calculation_form" />
 
 
     <Button
-        android:id="@+id/outlinedButton"
+        android:id="@+id/save_button"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:text="@string/calculation_save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tf_descritpion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tf_descritpion" />
+        app:layout_constraintTop_toBottomOf="@+id/ew_weddings_calculation" />
 
-
-
-
+    <Button
+        android:id="@+id/update_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wedding_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ew_weddings_calculation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

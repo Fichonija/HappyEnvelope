@@ -70,10 +70,14 @@ public class MockData {
                locales.stream().filter(l -> l.name == "Central Croatia").findFirst().get(),
                events.stream().filter(e -> e.name == "Garden Party").findFirst().get(),
                seasons.stream().filter(s -> s.name == "Peak (Spring/Summer)").findFirst().get(),
-               0)
+               100)
     ));
 
     public static List<Wedding> weddings = new ArrayList<>(Arrays.asList(
-            new Wedding(0, "Filip & Daria", "Filip and Daria's wedding.", calculations.get(0), gifts.stream().filter(g -> g.name == "Karaoke Set").findFirst().get())
+            new Wedding(0, "Filip & Daria", "Filip and Daria's wedding.", calculations.get(0), gifts.stream().filter(g -> g.name == "Karaoke Set").findFirst().get()),
+            new Wedding(1, "Mario & Ivana", "Mario and Ivana's wedding.", calculations.get(0), gifts.stream().filter(g -> g.name == "Pasta Machine").findFirst().get()),
+            new Wedding(2, "Josip & Antonia", "Josip and Antonia's wedding.", calculations.get(0), gifts.stream().filter(g -> g.name == "Painting").findFirst().get()),
+            new Wedding(3, "Ivica & Marica", "Ivica and Marica's wedding.", calculations.get(0), gifts.stream().filter(g -> g.name == "Video Game").findFirst().get())
+
     ));
 }

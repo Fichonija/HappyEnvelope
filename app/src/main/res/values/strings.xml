@@ -15,6 +15,7 @@
     <string name="calculation_intro">Enter required values to find out how expensive a wedding gift should be!</string>
     <string name="calculation_header_personal">Personal Information</string>
     <string name="calculation_label_salary">How much is your salary?</string>
+    <string name="wedding_label_gift">Choose your gift</string>
     <string name="calculation_header_bridalparty">Bridal Party Information</string>
     <string name="calculation_label_relationship">What is your relationship with the Bride or Groom?</string>
     <string name="calculation_label_attending">Will you be attending the wedding?</string>
@@ -28,8 +29,10 @@
     <string name="calculation_label_event">What type of event will the wedding party be?</string>
     <string name="calculation_label_season">In what season will the event be held?</string>
     <string name="calculation_save">Save</string>
+    <string name="wedding_update">Update</string>
     <string name="gift">gift</string>
     <string name="gift_form">Gift</string>
+    <string name="calculation_form">Calculation</string>
     <string name="wedding">wedding</string>
 
     <string name="title_activity_gift_detail">GiftDetail</string>
