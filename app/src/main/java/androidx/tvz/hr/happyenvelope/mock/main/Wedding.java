@@ -93,7 +93,6 @@ public class Wedding implements Parcelable {
             return new Wedding[size];
         }
     };
-
     @NonNull
     @Override
     public String toString() {

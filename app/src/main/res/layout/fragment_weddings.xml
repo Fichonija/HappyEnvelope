@@ -8,24 +8,21 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tw_weddings_intro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="183dp"
+        android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="256dp"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tw_weddings_form"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:text="@string/weddings_intro" />
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/wedding_list"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -38,19 +35,16 @@
     </ListView>
 
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tw_weddings_form"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="20sp"
-            android:layout_marginTop="300dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Test" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tw_weddings_form"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="240dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_weddings_intro"
+        tools:text="Test" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tw_title_form"
@@ -109,13 +103,40 @@
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tw_gift_form"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf_descritpion"
+        tools:text="@string/gift_form" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/calculation_label_locale"
+        app:layout_constraintTop_toBottomOf="@+id/tw_gift_form">
+
+    <AutoCompleteTextView
+        android:id="@+id/tw_calculation_locale_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        app:layout_constraintTop_toTopOf="@+id/tf_calculation_label_locale" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/outlinedButton"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="180dp"
         android:text="@string/calculation_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tf_descritpion"

@@ -31,36 +31,36 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
     private MockWeddingService weddingService;
     private ListView listView;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        weddingService = new MockWeddingService();
-
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_weddings, container, false);
-        tw_weddings_intro = root.findViewById(R.id.tw_weddings_intro);
-        tw_weddings_intro.setText(R.string.weddings_intro);
-
-        tw_weddings_form = root.findViewById(R.id.tw_weddings_form);
-        tw_weddings_form.setText(R.string.weddings_form);
-
-        tw_weddings_title = root.findViewById(R.id.tw_title_form);
-        tw_weddings_title.setText(R.string.tw_title_form);
-
-        tw_weddings_description = root.findViewById(R.id.tw_description_form);
-        tw_weddings_description.setText(R.string.tw_description_form);
+        weddingService = new MockWeddingService();
+        initialize(root);
         return root;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void initialize(View root) {
-        listView=root.findViewById(R.id.gift_listview);
-        initializeGiftsList(root);
+        tw_weddings_intro = root.findViewById(R.id.tw_weddings_intro);
+        tw_weddings_form = root.findViewById(R.id.tw_weddings_form);
+        tw_weddings_title = root.findViewById(R.id.tw_title_form);
+        tw_weddings_description = root.findViewById(R.id.tw_description_form);
+        listView=root.findViewById(R.id.wedding_list);
+
+        tw_weddings_intro.setText(R.string.weddings_intro);
+        tw_weddings_form.setText(R.string.weddings_form);
+        tw_weddings_title.setText(R.string.tw_title_form);
+        tw_weddings_description.setText(R.string.tw_description_form);
+
+        initializeWeddingList(root);
 
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void initializeGiftsList(View root) {
+    public void initializeWeddingList(View root) {
 
         ArrayAdapter<Wedding> adapter = new ArrayAdapter<Wedding>(getActivity(), android.R.layout.simple_list_item_1,weddingService.getWeddings() );
         listView.setAdapter(adapter);
@@ -68,9 +68,7 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i=new Intent(getActivity(), GiftDetail.class);
-                i.putExtra(getString(R.string.gift),weddingService.getWeddings().get(position));
-                startActivity(i);
+
             }
         });
     }

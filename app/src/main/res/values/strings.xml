@@ -29,6 +29,9 @@
     <string name="calculation_label_season">In what season will the event be held?</string>
     <string name="calculation_save">Save</string>
     <string name="gift">gift</string>
+    <string name="gift_form">Gift</string>
+    <string name="wedding">wedding</string>
+
     <string name="title_activity_gift_detail">GiftDetail</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
