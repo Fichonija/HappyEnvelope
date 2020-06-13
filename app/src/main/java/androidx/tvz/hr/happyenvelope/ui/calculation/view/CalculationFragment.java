@@ -12,8 +12,13 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.tvz.hr.happyenvelope.mock.codebook.Event;
+import androidx.tvz.hr.happyenvelope.mock.codebook.Locale;
+import androidx.tvz.hr.happyenvelope.mock.codebook.Relationship;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Salary;
-import androidx.tvz.hr.happyenvelope.services.CodebookService;
+import androidx.tvz.hr.happyenvelope.mock.codebook.Season;
+import androidx.tvz.hr.happyenvelope.services.codebook.CodebookService;
+import androidx.tvz.hr.happyenvelope.services.codebook.MockCodebookService;
 
 public class CalculationFragment extends Fragment implements CalculationView {
 
@@ -31,7 +36,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
         //todo Dodati button logiku -> na Calculate se izračuna amount i opcija pokazuje da se poveže sa Weddingom!
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_calculation, container, false);
-        codebookService = new CodebookService();
+        codebookService = new MockCodebookService();
         initialize(root);
 
         return root;
@@ -66,7 +71,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
 //        ArrayAdapter<CharSequence> adapter =
 //                ArrayAdapter.createFromResource(getActivity(), R.array.salary, R.layout.calculation_dropdownitem);
 
-        ArrayAdapter<Salary> adapter = new ArrayAdapter<Salary>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getSalaries());
+        ArrayAdapter<Salary> adapter =
+                new ArrayAdapter<Salary>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getSalaries());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_salary_dropdown);
@@ -83,8 +89,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
     }
     @Override
     public void initializeRelationshipDropdown(View root) {
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(getActivity(), R.array.relationship, R.layout.calculation_dropdownitem);
+        ArrayAdapter<Relationship> adapter =
+                new ArrayAdapter<Relationship>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getRelationships());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_relationship_dropdown);
@@ -101,8 +107,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
     }
     @Override
     public void initializeLocaleDropdown(View root) {
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(getActivity(), R.array.locale, R.layout.calculation_dropdownitem);
+        ArrayAdapter<Locale> adapter =
+                new ArrayAdapter<Locale>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getLocales());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_locale_dropdown);
@@ -110,8 +116,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
     }
     @Override
     public void initializeEventDropdown(View root) {
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(getActivity(), R.array.event, R.layout.calculation_dropdownitem);
+        ArrayAdapter<Event> adapter =
+                new ArrayAdapter<Event>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getEvents());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_event_dropdown);
@@ -119,8 +125,8 @@ public class CalculationFragment extends Fragment implements CalculationView {
     }
     @Override
     public void initializeSeasonDropdown(View root) {
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(getActivity(), R.array.season, R.layout.calculation_dropdownitem);
+        ArrayAdapter<Season> adapter =
+                new ArrayAdapter<Season>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getSeasons());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_season_dropdown);

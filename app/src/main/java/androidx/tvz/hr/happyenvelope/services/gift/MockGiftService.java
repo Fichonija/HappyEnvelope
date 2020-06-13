@@ -1,4 +1,4 @@
-package androidx.tvz.hr.happyenvelope.services;
+package androidx.tvz.hr.happyenvelope.services.gift;
 
 import android.os.Build;
 
@@ -8,7 +8,8 @@ import androidx.tvz.hr.happyenvelope.mock.main.Gift;
 
 import java.util.List;
 
-public class GiftService {
+public class MockGiftService implements GiftService {
+    @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
     public List<Gift> getGifts(){
         return MockData.gifts;
