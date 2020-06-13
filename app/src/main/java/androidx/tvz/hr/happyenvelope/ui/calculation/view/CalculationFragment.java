@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.tvz.hr.happyenvelope.mock.MockData;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Salary;
+import androidx.tvz.hr.happyenvelope.services.CodebookService;
 
 public class CalculationFragment extends Fragment implements CalculationView {
 
@@ -22,7 +22,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
     private TextView tw_calculation_header_bridalparty;
     private TextView tw_calculation_header_event;
 
-    private MockData mockData;
+    private CodebookService codebookService;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -31,8 +31,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
         //todo Dodati button logiku -> na Calculate se izračuna amount i opcija pokazuje da se poveže sa Weddingom!
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_calculation, container, false);
-
-        this.mockData = new MockData();
+        codebookService = new CodebookService();
         initialize(root);
 
         return root;
@@ -67,7 +66,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
 //        ArrayAdapter<CharSequence> adapter =
 //                ArrayAdapter.createFromResource(getActivity(), R.array.salary, R.layout.calculation_dropdownitem);
 
-        ArrayAdapter<Salary> adapter = new ArrayAdapter<Salary>(getActivity(), R.layout.calculation_dropdownitem, mockData.salaries);
+        ArrayAdapter<Salary> adapter = new ArrayAdapter<Salary>(getActivity(), R.layout.calculation_dropdownitem, codebookService.getSalaries());
 
         AutoCompleteTextView editTextFilledExposedDropdown =
                 root.findViewById(R.id.tw_calculation_salary_dropdown);
