@@ -111,6 +111,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
         initializeFestivitiesDropdown(root);
         initializeLocaleDropdown(root);
         initializeEventDropdown(root);
+        initializeSeasonDropdown(root);
 
         initializeSaveButton();
     }
