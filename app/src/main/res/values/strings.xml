@@ -36,7 +36,7 @@
     <string name="calculation_form">Calculation</string>
     <string name="wedding">wedding</string>
     <string name="title">Welcome to Happy Envelope</string>
-    <string name="steps">First you need to enter a new wedding and then calculate how much money you need to give for a gift using our calculator. And finally it is necessary to choose a gift according to the calculation.</string>
+    <string name="steps">First you need to enter a new wedding and then calculate how much money you need to give for a gift using our calculator. And finally it is necessary to choose a gift according to the calculation. In our application you can save all the weddings you have been to and the gifts you have given.</string>
 
     <string name="title_activity_gift_detail">GiftDetail</string>
     <!-- Strings used for fragments for navigation -->
