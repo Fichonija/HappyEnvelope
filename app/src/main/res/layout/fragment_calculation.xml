@@ -188,11 +188,12 @@
 
         <Button
             android:id="@+id/bt_calculation_save"
+            android:backgroundTint="@color/colorPeach"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/calculation_save"
-            style="?attr/materialButtonOutlinedStyle"
-            />
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="160dp"
+            android:text="@string/calculation_save" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

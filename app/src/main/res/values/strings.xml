@@ -35,6 +35,8 @@
     <string name="gift_form">Gift</string>
     <string name="calculation_form">Calculation</string>
     <string name="wedding">wedding</string>
+    <string name="title">Welcome to Happy Envelope</string>
+    <string name="steps">First you need to enter a new wedding and then calculate how much money you need to give for a gift using our calculator. And finally it is necessary to choose a gift according to the calculation.</string>
 
     <string name="title_activity_gift_detail">GiftDetail</string>
     <!-- Strings used for fragments for navigation -->
@@ -42,6 +44,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="tw_home_intro">Receiving wedding gifts is one of the perks of getting married, and your guests are usually only too happy to buy you something wonderful to celebrate your marriage. However, the process of wedding gift giving doesn’t always run smoothly. Here is our simple solution to find right gift for somenones wedding. </string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

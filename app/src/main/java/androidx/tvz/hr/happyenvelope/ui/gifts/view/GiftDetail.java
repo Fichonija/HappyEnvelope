@@ -40,6 +40,7 @@ public class GiftDetail extends AppCompatActivity {
 
         tw_gift_cost = findViewById(R.id.gift_cost);
         tw_gift_cost.setText(String.valueOf(importedGift.getCost())+" $");
+
         gift_image=findViewById(R.id.gift_image);
 
         Uri imageUri = Uri.parse(importedGift.getImageUrl());

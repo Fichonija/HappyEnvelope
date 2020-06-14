@@ -113,6 +113,7 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 weddingId=weddingService.getWeddings().get(position).id;
+                tw_weddings_form.setVisibility(View.INVISIBLE);
                 update_button.setVisibility(View.VISIBLE);
                 new_button.setVisibility(View.VISIBLE);
                 save_button.setVisibility(View.INVISIBLE);
@@ -123,7 +124,7 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
                 else
                     tw_wedding_gift_dropdown.setText("");
                 if(weddingService.getWeddings().get(position).getCalculation()!=null)
-                    ew_weddings_calculation.setText(String.valueOf(weddingService.getWeddings().get(position).getCalculation().getCalculationSum()));
+                    ew_weddings_calculation.setText(weddingService.getWeddings().get(position).getCalculation().toString());
                 else
                     ew_weddings_calculation.setText("");
                 selectedGift=weddingService.getWeddings().get(position).getGift();
@@ -175,7 +176,6 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //double calculation = calculationPresenter.calculate(selectedSalary, selectedAttending, selectedRelationship, selectedFestivities, selectedLocale, selectedEvent, selectedSeason);
                 selectedTitle=ew_weddings_title.getText().toString();
                 selectedDescription=ew_weddings_description.getText().toString();
 
@@ -204,7 +204,6 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
         new_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //double calculation = calculationPresenter.calculate(selectedSalary, selectedAttending, selectedRelationship, selectedFestivities, selectedLocale, selectedEvent, selectedSeason);
                 ew_weddings_title.setText("");
                 ew_weddings_description.setText("");
                 ew_weddings_calculation.setText("");
@@ -212,6 +211,7 @@ public class WeddingsFragment extends Fragment implements WeddingsView {
                 update_button.setVisibility(View.INVISIBLE);
                 new_button.setVisibility(View.INVISIBLE);
                 save_button.setVisibility(View.VISIBLE);
+                tw_weddings_form.setVisibility(View.VISIBLE);
             }
         });
     }

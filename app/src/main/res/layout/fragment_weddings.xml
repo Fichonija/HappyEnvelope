@@ -160,9 +160,9 @@
 
     <Button
         android:id="@+id/save_button"
-        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPeach"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
         android:layout_marginTop="20dp"
@@ -172,7 +172,7 @@
 
     <Button
         android:id="@+id/update_button"
-        style="?attr/materialButtonOutlinedStyle"
+        android:backgroundTint="@color/colorPeach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -184,7 +184,7 @@
 
     <Button
         android:id="@+id/new_button"
-        style="?attr/materialButtonOutlinedStyle"
+        android:backgroundTint="@color/colorPeach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

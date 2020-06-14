@@ -18,7 +18,7 @@
             android:title="@string/menu_gifts" />
         <item
             android:id="@+id/nav_calculation"
-            android:icon="@drawable/ic_calculate"
+            android:icon="@drawable/ic_calculator_0"
             android:title="@string/menu_calculation" />
     </group>
 </menu>
