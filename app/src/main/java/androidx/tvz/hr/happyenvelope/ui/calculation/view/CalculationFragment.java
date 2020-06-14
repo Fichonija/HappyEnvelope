@@ -228,10 +228,11 @@ public class CalculationFragment extends Fragment implements CalculationView {
                         new ArrayAdapter<Wedding>(getActivity(), R.layout.calculation_dropdownitem, weddingService.getWeddings());
                 MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(getActivity());
                 dialogBuilder
-                        .setTitle("Select Wedding and click Save to add calculation. Calculation sum: " + calculation.calculationSum)
+                        .setTitle("Calculation sum: " + calculation + ". Select Wedding and click Save.")
                         .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                selectedWedding = null;
                                 dialog.dismiss();
                             }
                         })
@@ -243,7 +244,7 @@ public class CalculationFragment extends Fragment implements CalculationView {
                                 }
                                 else{
                                     calculationPresenter.saveCalculationToWedding(calculation, selectedWedding);
-                                    Toast.makeText(getActivity(), "Calculation sum of " + calculation.calculationSum + " added to Wedding " + selectedWedding + ".", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), "Calculation sum of " + calculation + " added to Wedding " + selectedWedding + ".", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })

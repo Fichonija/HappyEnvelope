@@ -3,6 +3,7 @@ package androidx.tvz.hr.happyenvelope.mock.main;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Event;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Locale;
 import androidx.tvz.hr.happyenvelope.mock.codebook.Relationship;
@@ -148,4 +149,9 @@ public class Calculation implements Parcelable {
             return new Calculation[size];
         }
     };
+    @NonNull
+    @Override
+    public String toString() {
+        return this.calculationSum + " $";
+    }
 }
