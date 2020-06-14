@@ -30,6 +30,7 @@
     <string name="calculation_label_season">In what season will the event be held?</string>
     <string name="calculation_save">Save</string>
     <string name="wedding_update">Update</string>
+    <string name="wedding_new">New</string>
     <string name="gift">gift</string>
     <string name="gift_form">Gift</string>
     <string name="calculation_form">Calculation</string>

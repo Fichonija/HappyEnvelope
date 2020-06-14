@@ -21,8 +21,17 @@ public class WeddingsPresenterImpl implements WeddingsPresenter {
     @Override
     public void saveWedding(String title, String description, Calculation calculation, Gift gift) {
         Wedding tmp= new Wedding(10,title,description,calculation,gift);
-        mockWeddingService.getWeddings().add(tmp);
+        mockWeddingService.saveWedding(tmp);
 
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+
+    public void updateWedding(Integer id,String title, String description, Gift gift) {
+        mockWeddingService.getWeddings().stream().filter(wedding -> wedding.getId()==id).findFirst().get().setTitle(title);
+        mockWeddingService.getWeddings().stream().filter(wedding -> wedding.getId()==id).findFirst().get().setDescription(description);
+        mockWeddingService.getWeddings().stream().filter(wedding -> wedding.getId()==id).findFirst().get().setGift(gift);
 
     }
 }

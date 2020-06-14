@@ -5,4 +5,5 @@ import androidx.tvz.hr.happyenvelope.mock.main.Gift;
 
 public interface WeddingsPresenter {
     void saveWedding(String title, String description, Calculation calculation, Gift gift);
+    void updateWedding(Integer id,String title, String description, Gift gift);
 }
